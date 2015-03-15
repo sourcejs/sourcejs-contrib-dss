@@ -1,0 +1,38 @@
+<% for (var i = 0; i < sections.length; i++) { %>
+<section class="source_section">
+    <h2><%= sections[i].name %></h2>
+
+    <% if (sections[i].description) { %>
+        <p><%= sections[i].description %></p>
+    <% } %>
+
+    <% if (sections[i].markup) { %>
+        <code class="src-html <% if (config.visibleCode) { %>source_visible<% } %>">
+            <%- sections[i].markup.escaped %>
+        </code>
+
+        <div class="source_example">
+            <%- sections[i].markup.example %>
+        </div>
+    <% } %>
+
+    <% if (sections[i].state) { %>
+        <% for (var s = 0; s < sections[i].state.length; s++) { %>
+            <% var state = sections[i].state[s]; %>
+            <% var html = helpers.addClassToExample(sections[i].markup.example, state.escaped); %>
+            <h3><%= state.name %></h3>
+
+            <% if (state.description) { %>
+                <p><%= state.description %></p>
+            <% } %>
+
+            <code class="src-html <% if (config.visibleCode) { %>source_visible<% } %>">
+                <%= html %>
+            </code>
+            <div class="source_example">
+                <%- html %>
+            </div>
+        <% } %>
+    <% } %>
+</section>
+<% } %>
