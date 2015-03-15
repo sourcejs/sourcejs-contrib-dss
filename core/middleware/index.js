@@ -9,6 +9,7 @@ var cheerio = require('cheerio');
 var util = require('util');
 
 // Module configuration. Public object is exposed to Front-end via options API
+var globalConfig = global.opts.plugins && global.opts.plugins.dss ? global.opts.plugins.dss : {};
 var config = {
     enabled: true,
 
@@ -24,7 +25,7 @@ var config = {
     public: {}
 };
 // Overwriting base options
-deepExtend(config, global.opts.plugins.dss);
+deepExtend(config, globalConfig);
 
 /*
  * Gets markup and adds custom class to all first level nodes
