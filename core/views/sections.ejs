@@ -7,10 +7,6 @@
     <% } %>
 
     <% if (sections[i].markup) { %>
-        <code class="src-html <% if (config.visibleCode) { %>source_visible<% } %>">
-            <%- sections[i].markup.escaped %>
-        </code>
-
         <div class="source_example">
             <%- sections[i].markup.example %>
         </div>
@@ -26,9 +22,6 @@
                 <p><%= state.description %></p>
             <% } %>
 
-            <code class="src-html <% if (config.visibleCode) { %>source_visible<% } %>">
-                <%= html %>
-            </code>
             <div class="source_example">
                 <%- html %>
             </div>
