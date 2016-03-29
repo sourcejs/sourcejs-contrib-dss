@@ -65,7 +65,7 @@ var processRequest = function (req, res, next) {
     ) {
         var start = process.hrtime();
         var specPath = path.join(global.app.get('user'), req.path);
-        var specDirPath = path.dirname(specPath);
+        var specDirPath = path.extname(specPath) === '' ?  specPath : path.dirname(specPath);
 
         glob(config.targetCssMask, {
             cwd: specDirPath
