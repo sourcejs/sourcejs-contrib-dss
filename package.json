@@ -1,6 +1,6 @@
 {
   "name": "sourcejs-contrib-dss",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Robert Haritonov",
   "description": "CSS Documentation parser integration for transporting DSS into SourceJS Specs",
   "dependencies": {
