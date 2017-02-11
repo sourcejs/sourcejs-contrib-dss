@@ -2,7 +2,7 @@
 
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/sourcejs/Source)
 
-Appends rendered [DSS](https://github.com/darcyclarke/DSS) documentation into SourceJS Spec pages. Watch rendered [example Spec](http://sourcejs.com/specs/example-specs-showcase/dss/) and it's [source code](https://github.com/sourcejs/example-specs-showcase/blob/master/dss/css/dss.css).
+Appends rendered [DSS](https://github.com/DSSWG/DSS) documentation into SourceJS Spec pages. Watch rendered [example Spec](http://sourcejs.com/specs/example-specs-showcase/dss/) and it's [source code](https://github.com/sourcejs/example-specs-showcase/blob/master/dss/css/dss.css).
 
 [SourceJS](http://sourcejs.com) plugin (for 0.5.0+ version).
 
